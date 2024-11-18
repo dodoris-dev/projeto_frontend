@@ -1,0 +1,285 @@
+/* Reset básico para margens, preenchimentos e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Configurações gerais do body */
+  body {
+
+
+    background-image: url('../images/casa.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-attachment: fixed; /* Mantém a imagem fixa no fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+  
+
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px;
+  }
+
+  h1, h2, h3, h4, form label {
+    color: #7e5e60;
+  }
+  
+  /* Estilo do cabeçalho */
+  header {
+    width: 900px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .intro-text p {
+    text-align: justify;
+    margin: 1.5em 0; /* Aumenta o espaçamento entre parágrafos */
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+/* Barra que cobre toda a largura no topo */
+.header-bar {
+    width: 100%;
+    background-color: #ffffe6; /* Rosa pastel claro para o fundo da barra */
+    width: 900px; /* Largura fixa para alinhar com o content-wrapper */
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para destaque */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /* Estilo do título dentro da barra */
+  .header-title {
+    font-family: 'Garamond', serif; /* Fonte clássica */
+    font-size: 2.5em;
+    color: #7ec8e3; /* Azul pastel suave */
+    margin: 0;
+  }
+  
+  .header-title::before,
+  .header-title::after {
+  content: '✦'; /* Escolha de um símbolo decorativo simples */
+  color: #7e5e60; /* Tom sutil que remete ao medieval */
+  font-size: 1.0em;
+  margin: 0 10px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+    color: #7ec8e3; /* Azul pastel */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo da navegação */
+  nav {
+    background-color: #ffc0cb; /* Rosa pastel */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #ffb6c1; /* Tom ligeiramente mais escuro de rosa pastel */
+    border-radius: 5px;
+  }
+  
+  /* Estilo principal */
+  main {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px 0;
+  }
+  
+  /* Destaques da página inicial */
+  .destaques {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .destaques a {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background-color: #e0f7fa; /* Fundo azul pastel */
+  }
+  
+  .destaques a:hover {
+    transform: scale(1.05);
+  }
+  
+  .destaques img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .destaques p {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #ffebef; /* Fundo rosa bem claro */
+    color: #7e5e60;
+  }
+  
+  /* Formulário de contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+  }
+  
+  form label {
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffb6c1; /* Rosa pastel claro */
+    border-radius: 5px;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  form button {
+    padding: 10px;
+    border: none;
+    background-color: #7ec8e3; /* Azul pastel */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #6bb3d0; /* Azul pastel ligeiramente mais escuro */
+  }
+  
+  /* Estilo do rodapé */
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.9em;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media (max-width: 600px) {
+    .destaques {
+      flex-direction: column;
+    }
+  }
+  
+  /* Estilo para a seção de resenhas */
+.lista-resenhas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para cada resenha */
+  .resenha {
+    padding: 20px;
+    border: 1px solid #ffb6c1; /* Bordas rosa pastel */
+    border-radius: 8px;
+    background-color: #e0f7fa; /* Fundo azul pastel */
+  }
+  
+  /* Estilo para o botão de cada resenha */
+  .botao-resenha {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #7ec8e3; /* Azul pastel */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .botao-resenha:hover {
+    background-color: #6bb3d0; /* Azul pastel um pouco mais escuro */
+  }
+  
+  /* Contêiner principal para o conteúdo */
+.content-container {
+    max-width: 800px; /* Limita a largura para uma leitura confortável */
+    margin: 40px auto; /* Centraliza o conteúdo na página */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    border-radius: 12px; /* Bordas arredondadas para um visual suave */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .thumbnail {
+    width: 100%; /* Ajusta automaticamente ao contêiner */
+    max-width: 350px; /* Limite de largura para evitar imagens muito grandes */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas arredondadas para visual mais agradável */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+
+  article img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 8px; /* (Opcional) Bordas arredondadas para um visual mais suave */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* (Opcional) Sombra sutil para destaque */
+  }
+  
+  /* Estilos para centralizar e definir a área branca */
+  .content-wrapper {
+    background-color: #ffffff;
+    width: 900px; /* Mesma largura do header-bar */
+    margin: 0 auto; /* Centraliza o content-wrapper */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .content-container h2 {
+    margin-bottom: 10px;
+  }
+
+  .content-container h3 {
+    margin: 32px 0 16px;
+  }
+
+  .content-container > img {
+    align-self: center;
+  }
